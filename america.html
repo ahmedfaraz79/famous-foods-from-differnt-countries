@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USA - American Cuisine</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7fafd;
+    }
+
+    .topnav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 1000;
+    }
+
+    .topnav a {
+      float: left;
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      height: 100vh;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 50px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .sidebar.hide {
+      transform: translateX(-250px);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 60px;
+      left: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+      z-index: 1001;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 80px 40px 40px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .sidebar.hide ~ .content {
+      margin-left: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      text-transform: uppercase;
+      color: #2c3e50;
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .image img {
+      width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      font-size: 17px;
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: justify;
+      color: #333;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+   <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="poverview.html">Pakistan
+
+    </a>
+    <a href="ioverview.html">Italy</a>
+    <a href="joverview.html">Japan</a>
+    <a href="ioverview.html">India</a>
+    <a href="foverview.html">France</a>
+    <a href="usoverview.html">USA</a>
+   
+  </div>
+
+  <!-- 🔘 Sidebar Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <!-- ✅ Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <h3>🍽️ Explore Foods</h3>
+    <a href="pakistan.html">🇵🇰 Biryani</a>
+    <a href="india.html">🇮🇳 Golgappe</a>
+    <a href="france.html">🇫🇷 Macarons</a>
+    <a href="usa.html">🇺🇸 American Cuisine</a>
+    <a href="japan.html">🇯🇵 Sushi</a>
+    <a href="italy.html">🇮🇹 Pizza</a>
+  </div>
+
+  <!-- ✅ Main Content -->
+  <div class="content">
+    <h1>🇺🇸 Classic American Burger</h1>
+
+    <div class="image">
+      <img src="american cruisine.jpeg" alt="Classic American Burger">
+    </div>
+
+    <p>
+      American cuisine is known for its variety and hearty flavors. The classic cheeseburger is a true icon — a juicy beef patty sandwiched between toasted buns, topped with cheese, lettuce, tomato, and sauces. This dish represents fast food culture and backyard cookouts across the United States.
+    </p>
+
+    <h2>🧂 Ingredients</h2>
+    <ul>
+      <li>Ground beef (1/4 lb per patty)</li>
+      <li>Burger buns</li>
+      <li>Cheddar cheese slices</li>
+      <li>Lettuce, tomato, onion</li>
+      <li>Pickles (optional)</li>
+      <li>Ketchup, mustard, mayonnaise</li>
+      <li>Salt and pepper</li>
+    </ul>
+
+    <h2>👨‍🍳 Instructions</h2>
+    <ul>
+      <li><strong>Step 1:</strong> Season ground beef and form patties.</li>
+      <li><strong>Step 2:</strong> Cook patties on grill or skillet (3–4 mins per side).</li>
+      <li><strong>Step 3:</strong> Add cheese slice during last 30 seconds of cooking.</li>
+      <li><strong>Step 4:</strong> Toast buns lightly.</li>
+      <li><strong>Step 5:</strong> Assemble: bun, lettuce, patty with cheese, tomato, onion, condiments, top bun.</li>
+    </ul>
+
+    <div class="footer">
+      &copy; 2025 | Classic American Cuisine | All rights reserved.
+    </div>
+  </div>
+
+  <!-- ✅ JS -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("hide");
+    }
+  </script>
+
+</body>
+</html>
