@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Italy Overview</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8ff;
+    }
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+    .topnav a {
+      float: left;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .topnav a:hover {
+      background-color: #555;
+      color: white;
+    }
+    .topnav a.active {
+      background-color: #ff4500;
+      color: white;
+    }
+    .openbtn {
+      font-size: 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+    .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ddd;
+      display: block;
+    }
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    .carousel-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .myslides {
+      display: none;
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      text-decoration: underline;
+      color: #b22222;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+   <button class="openbtn" onclick="toggleSidebar()">☰</button>
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="poverview.html">Pakistan
+
+    </a>
+    <a href="itoverview.html">Italy</a>
+    <a href="joverview.html">Japan</a>
+    <a href="ioverview.html">India</a>
+    <a href="foverview.html">France</a>
+    <a href="usoverview.html">USA</a>
+    </div>
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" onclick="toggleSidebar()">❌ Close</a>
+     <a href="pakistan.html">🇵🇰 Pakistani Biryani</a>
+    <a href="india.html">🇮🇳 Indian Golgappe</a>
+    <a href="japan.html">🇯🇵 Japanese Sushi</a>
+    <a href="italy.html">🇮🇹 Crown Crust Pizza</a>
+    <a href="france.html">🇫🇷 French Macarons</a>
+    <a href="usa.html">🇺🇸 American Cuisine</a>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel-container">
+    <img class="myslides" src="crown crust.jpeg" alt="Italian Pizza">
+  
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2>Italy Overview</h2>
+    <p>
+      Italy is a country in Southern Europe known for its rich history, stunning architecture, and diverse landscapes — 
+      from the snowy Alps to Mediterranean coastlines. It has been the birthplace of ancient civilizations, Renaissance 
+      art, and cultural movements that shaped the world. Italy is also celebrated for its vibrant traditions, fashion, 
+      and deep influence on global cuisine and lifestyle.
+    </p>
+  </div>
+
+  <!-- JavaScript for sidebar and carousel -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+    }
+
+    let slideIndex = 0;
+    carousel();
+    function carousel() {
+      const slides = document.getElementsByClassName("myslides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USA Overview</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5fbff;
+    }
+
+    /* Navbar */
+    .topnav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 1000;
+    }
+
+    .topnav a {
+      float: left;
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      height: 100vh;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 50px;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .sidebar.hide {
+      transform: translateX(-250px);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 60px;
+      left: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+      z-index: 1001;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .carousel-container {
+      margin-left: 240px;
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 350px;
+      overflow: hidden;
+      transition: margin-left 0.3s ease;
+    }
+
+    .sidebar.hide ~ .carousel-container {
+      margin-left: 20px;
+    }
+
+    .myslides {
+      display: none;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .content {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      margin-left: 240px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .sidebar.hide ~ .content {
+      margin-left: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      color: #1c3b6e;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: justify;
+      color: #333;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+   <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+    <a href="poverview.html">Pakistan
+    <a href="itoverview.html">Italy</a>
+    <a href="joverview.html">Japan</a>
+    <a href="ioverview.html">India</a>
+    <a href="foverview.html">France</a>
+    <a href="usoverview.html">USA</a>
+  
+  </div>
+
+  <!-- 🔘 Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <!-- ✅ Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <h3>🍽️ Explore Foods</h3>
+    <a href="pakistan.html">🇵🇰 Biryani</a>
+    <a href="india.html">🇮🇳 Golgappe</a>
+    <a href="france.html">🇫🇷 Macarons</a>
+    <a href="usa.html">🇺🇸 American Cuisine</a>
+    <a href="japan.html">🇯🇵 Sushi</a>
+    <a href="italy.html">🇮🇹 Pizza</a>
+  </div>
+
+  <!-- ✅ Carousel -->
+  
+
+  <!-- ✅ Overview -->
+  <div class="content">
+    <h1>ITALIAN Pizza</h1>:
+    <p>
+        <h2>Italian Pizza Overview</h2>
+<p>
+  Pizza is one of Italy's most iconic dishes, known worldwide for its thin crust, rich tomato sauce, and melted mozzarella cheese. 
+  Originating from Naples, traditional Italian pizzas are baked in wood-fired ovens and topped with simple, fresh ingredients like basil, tomatoes, and olive oil. 
+  Whether it's a classic Margherita or a gourmet variant, pizza represents the heart of Italian street food and culinary pride.
+</p>
+
+    <h2>How to Make Crown Crust Pizza</h2>
+<ol>
+  <li><strong>Prepare the Dough:</strong> Mix flour, yeast, warm water, salt, and olive oil. Knead and let it rise.</li>
+  <li><strong>Make the Crown Crust:</strong> Roll out the dough into a circle. Around the edge, place mini meatballs or cheese sticks, then fold the edges over to create the “crown crust.”</li>
+  <li><strong>Add Sauce:</strong> Spread tomato pizza sauce over the base of the dough.</li>
+  <li><strong>Add Toppings:</strong> Add mozzarella cheese, vegetables (like bell peppers, onions, mushrooms), and your choice of meats (pepperoni, chicken, etc.).</li>
+  <li><strong>Bake:</strong> Preheat the oven to 220°C (425°F). Bake for 15–20 minutes or until golden brown and cooked through.</li>
+  <li><strong>Garnish & Serve:</strong> Add oregano, chili flakes, and serve hot!</li>
+</ol>
+
+  </div>
+
+  <!-- ✅ Footer -->
+  <div class="footer">
+    &copy; 2025 | Italy | All rights reserved.
+  </div>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("hide");
+    }
+
+    let myIndex = 0;
+    carousel();
+
+    function carousel() {
+      let i;
+      let x = document.getElementsByClassName("myslides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+  </script>
+
+</body>
+</html>
